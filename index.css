@@ -1,0 +1,122 @@
+body{
+    display: grid;
+    grid-template-columns: repeat(10,1fr);
+    grid-template-rows: repeat(10,1fr);
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+.one{
+    background-color: red;
+    grid-column: 1/6;
+    grid-row: 1/6;
+    display: grid;
+    grid-template-columns: repeat(10,1fr);
+    grid-template-rows: repeat(10,1fr);
+    animation: changebackground 7s infinite ease-in-out;
+    
+}
+
+
+.tow{
+    background-color: blue;
+    grid-column: 6/11;
+    grid-row: 1/6;
+    display: grid;
+    grid-template-columns: repeat(10,1fr);
+    grid-template-rows: repeat(10,1fr);    
+    animation: changebackground2 7s infinite ease-in-out;
+}
+
+
+.three{
+    background-color: yellow;
+    grid-column: 1/6;
+    grid-row: 6/11;
+    display: grid;
+    grid-template-columns: repeat(10,1fr);
+    grid-template-rows: repeat(10,1fr); 
+    animation: changebackground3 7s infinite ease-in-out;
+    
+}
+
+.four{
+    background-color: green;
+    grid-column: 6/11;
+    grid-row: 6/11;
+    display: grid;
+    grid-template-columns: repeat(10,1fr);
+    grid-template-rows: repeat(10,1fr);    
+    animation: changebackground4 7s infinite ease-in-out;
+}
+
+h1 {
+color: white;
+ grid-column: 1/11;
+ grid-row: 1/1;
+ align-self: center;
+ justify-self: center;
+
+}
+
+iframe {
+    grid-column:1/11;
+    grid-row: 1/11;
+    align-self: center;
+    justify-self: center;
+    
+}
+@media only screen and (max-width: 1150px){
+    .one{
+        grid-column: 1/11;
+        grid-row: 1/1; 
+    }
+    .tow{
+        grid-column: 1/11;
+        grid-row: 2/2; 
+    }
+    .three{
+        grid-column: 1/11;
+        grid-row: 3/3; 
+    }
+    .four{
+        grid-column: 1/11;
+        grid-row: 4/4; 
+    }
+
+}    
+
+@keyframes changebackground {
+    0%{
+        background-color: blue;
+    }
+    100% {
+        background-color: orange;
+ }
+}
+@keyframes changebackground2 {
+    0%{
+        background-color: red;
+    }
+    100% {
+        background-color: yellow;
+ }
+}
+@keyframes changebackground3 {
+    0%{
+        background-color: tomato;
+    }
+    100% {
+        background-color:darkblue;
+ }
+}
+@keyframes changebackground4 {
+    0%{
+        background-color: blue;
+    }
+    100% {
+        background-color:fuchsia ;
+ }
+}
